@@ -1,0 +1,39 @@
+.combination-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  .group-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 400px;
+    z-index: -9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .button-click-browser {
+    align-items: center;
+    border-radius: 6px;
+    width: auto;
+    border: none;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      transform: scale(0.9);
+      border: none;
+    }
+  }
+}
