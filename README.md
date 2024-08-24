@@ -1,51 +1,49 @@
-# React + TypeScript + Vite
+# Modular Compliance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Development Environment
 
-Currently, two official plugins are available:
+## Required
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Node.js (version 14.x or higher) - Preferably Node 18
+npm hoặc Yarn
 
-## Expanding the ESLint configuration
+React 18
+Vite 5
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Project Setup**
 
-- Configure the top-level `parserOptions` property like this:
+git clone https://github.com/thuan27/color-combination-app.git
+cd color-combination-app
+'npm install' or 'yarn install'
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**Running the Application**
+Run: npm run dev
+Build: npm run build
+Test: npm test
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**Source Code Documentation**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+🚀 Components: UI components are organized in the src/components directory.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# color-combination-app
+- Component.tsx: TypeScript and HTML code file
+- style.scss: Independent styles for each component
+- {name}Slice.ts: Setup of toolkit slice for each component
+  🛠️ Redux: Redux configuration and state slices are in the src/redux directory.
+
+- store: Configures the Redux store
+
+📦 Elements: Configuration of shared elements (input, table, loading...)
+
+🚀 Assets: Stores SCSS files, images, sounds...
+
+🛠️ Types: Configuration of interfaces
+
+📦 vite-env: Stores base API URLs, project keys
+
+🚀 package.json: Lists installed packages
+
+🛠️ tsconfig.json, vite.config.ts: Project configuration files
+
+## Redux Configuration
+
+src/redux/store.ts: Redux store configuration.
